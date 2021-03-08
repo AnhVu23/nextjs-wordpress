@@ -309,7 +309,7 @@
 			return false;
 		}
 
-		// Allow links to admin ajax as faux frontend URLs.
+		// Allow links to admin ajax as faux client URLs.
 		if ( /\/wp-admin\/admin-ajax\.php$/.test( element.pathname ) ) {
 			return args.allowAdminAjax;
 		}
@@ -323,7 +323,7 @@
 	};
 
 	/**
-	 * Inject the customize_changeset_uuid query param into links on the frontend.
+	 * Inject the customize_changeset_uuid query param into links on the client.
 	 *
 	 * @since 4.7.0
 	 * @access protected
@@ -364,7 +364,7 @@
 
 		if ( ! api.isLinkPreviewable( element ) ) {
 
-			// Style link as unpreviewable only if previewing in iframe; if previewing on frontend, links will be allowed to work normally.
+			// Style link as unpreviewable only if previewing in iframe; if previewing on client, links will be allowed to work normally.
 			if ( api.settings.channel ) {
 				$element.addClass( 'customize-unpreviewable' );
 			}
@@ -522,7 +522,7 @@
 
 		if ( 'GET' !== form.method.toUpperCase() || ! api.isLinkPreviewable( urlParser ) ) {
 
-			// Style form as unpreviewable only if previewing in iframe; if previewing on frontend, all forms will be allowed to work normally.
+			// Style form as unpreviewable only if previewing in iframe; if previewing on client, all forms will be allowed to work normally.
 			if ( api.settings.channel ) {
 				$( form ).addClass( 'customize-unpreviewable' );
 			}

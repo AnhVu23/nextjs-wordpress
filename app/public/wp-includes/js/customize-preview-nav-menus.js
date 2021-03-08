@@ -45,7 +45,7 @@ wp.customize.navMenusPreview = wp.customize.MenusCustomizerPreview = ( function(
 				/*
 				 * Handle case where an invalid nav menu item (one for which its associated object has been deleted)
 				 * is synced from the controls into the preview. Since invalid nav menu items are filtered out from
-				 * being exported to the frontend by the _is_valid_nav_menu_item filter in wp_get_nav_menu_items(),
+				 * being exported to the client by the _is_valid_nav_menu_item filter in wp_get_nav_menu_items(),
 				 * the customizer controls will have a nav_menu_item setting where the preview will have none, and
 				 * this can trigger an infinite fallback refresh when the nav menu item lacks any valid items.
 				 */
