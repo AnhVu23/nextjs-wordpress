@@ -6,7 +6,7 @@ export default async (req, res) => {
             content
         }
     }`
-    const data = await fetch(`${process.env.WORDORESS_LOCAL_API_URL}`, {
+    const data = await fetch(`${process.env.WORDPRESS_LOCAL_API_URL}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -627,3 +627,13 @@ function twentytwentyone_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
+
+add_action('init', function() {
+    register_post_type('toaster', [
+        'public' => true,
+        'label' => 'Toasters',
+        'show_in_graphql' => true,
+        'graphql_single_name' => 'Toaster',
+        'graphql_plural_name' => 'Toasters',
+    ]);
+});
